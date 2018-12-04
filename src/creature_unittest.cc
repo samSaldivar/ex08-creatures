@@ -38,7 +38,6 @@
 #include <random>
 #include <chrono>
 
-#include "creature.h"
 
 #include "gtest/gtest.h"
 
@@ -55,6 +54,7 @@ namespace {
     using std::string;
 
     using namespace ::testing_internal;
+    typedef uint64_t uint;
 
     class CreatureTest : public ::testing::Test {
     protected:
