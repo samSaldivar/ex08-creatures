@@ -9,7 +9,7 @@ namespace edu {
             namespace csv13 {
                 int balrog::getDamage() const {
                     int damage;
-                    damage = Creature::getDamage();
+                    damage = Demon::getDamage();
                     std::cout << getSpecies() << " attack for " <<
                     damage << "points!" << std::endl;
                     int damage2 = (rand() % strength) + 1;

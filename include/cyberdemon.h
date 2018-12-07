@@ -9,6 +9,10 @@ namespace edu {
     namespace vcccd {
         namespace vc {
             namespace csv13 {
+                class cyberdemon : public Demon {
+                    virtual int getDamage() const;
+                    virtual const std::string &getSpecies() const = 0;
+                };
 
             }
         }
