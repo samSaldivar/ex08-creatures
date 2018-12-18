@@ -7,9 +7,11 @@ namespace edu {
     namespace vcccd {
         namespace vc {
             namespace csv13 {
-                class Demon : public Creature {
-                    virtual int getDamage() const;
-                    virtual const std::string &getSpecies() const = 0;
+                class demon : public Creature {
+                public:
+                    demon(int strength, int hit): Creature(strength, hit) {
+                    }
+                    int getDamage() const;
                 };
             }
         }

@@ -8,8 +8,14 @@ namespace edu {
         namespace vc {
             namespace csv13 {
                 class elf : public Creature {
-                    virtual int getDamage() const;
-                    virtual const std::string &getSpecies() const = 0;
+                public:
+                    elf(int strength, int hit) : Creature(strength, hit) {
+                    }
+                    int getDamage() const;
+                    const std::string &getSpecies() const;
+
+                private:
+                    const std::string species = "Elf";
                 };
             }
         }

@@ -1,16 +1,20 @@
+#include <iostream>
+#include "creature.h"
+#include "demon.h"
+#include "cyberdemon.h"
+#include <string>
+#include <random>
+
 namespace edu {
     namespace vcccd {
         namespace vc {
             namespace csv13 {
-                int balrog::getDamage() const {
-                    int damage;
-                    damage = Demon::getDamage();
-                    std::cout << getSpecies() << " attack for " <<
-                              damage << "points!" << std::endl;
-                    int damage2 = (rand() % strength) + 1;
-                    std::cout << "Balrog speed attack inflicts " << damage2 << "additional damage points!" << std::endl;
-                    damage = damage + damage2;
-                    return damage;
+                const std::string &cyberdemon::getSpecies() const {
+                    return species;
+                }
+
+                int cyberdemon::getDamage() const {
+                    return demon::getDamage();
                 }
             }
         }
